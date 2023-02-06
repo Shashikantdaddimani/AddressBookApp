@@ -23,7 +23,69 @@
         Person Address form
       </div>
     </form>
-   
    </div>
+   <div class="form-content-1">
+    <form class="form-1" action="#" onsubmit="save();return false">
+   
+    <div class="row-content">
+      
+        <input class="input" type="text" id="name"
+        name="name" placeholder="your name..." required>
+        <error-output class="text-error error-output" for="text"></error-output>
+    </div>
+    <div class="row-content">
+        <input class="input_address" type="text" id="address"
+        name="name" placeholder="Address.." required>
+    </div>
+    <div class="row-content ">
+        <div>
+           
+            <select class="select text " id="city" name="city">select city
+                <option value="Select city">Select city</option>
+                <option value="hukkeri">hukkeri</option>
+                <option value="chikkodi">chikkodi</option>
+                <option value="gokak">gokak</option>
+                <option value="athani">athani</option>
+                <option value="nippani">nippani</option>
+                <option value="savadatti">savadatti</option>
+                <option value="kittur">kittur</option>
+                
+               
+            </select>
+            <select class="select element" id="state" name="state" >
+                <option value="Select state">Select state</option>
+                <option value="Andra pradesh">Andra pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Haryana">Haryana</option>
+                <option value="karnatak">karnatak</option>
+                <option value="panjab">panjab</option>
+                <option value="keral">keral</option>
+               
+            </select>
+            <select class="select" id="zip" name="zip">
+                <option value="Zip code">Zip code</option>
+                <option value="591309">591309</option>
+                <option value="561586">561586</option>
+                <option value="563256">563256</option>
+                <option value="563256">563285</option>
+                <option value="563256">563032</option>
+                <option value="563256">563894</option>
+              
+            </select>
+        </div>
+    </div>
+    <div class="row-content">
+        <input class="input" type="phoneNumber" id="phoneNumber"
+        name="name" placeholder="phoneNumber..." required>
+    </div>
+    <div class="buttonParent">
+        <div class="submit-reset">
+        <button type="submit" class="button submitButton" id="submitButton">Add</button>
+        <button type="reset" class="cancelButton button">Reset</button>
+      </div>
+    </div>
+    </form>
+  </div>
 </body>
 </html>
