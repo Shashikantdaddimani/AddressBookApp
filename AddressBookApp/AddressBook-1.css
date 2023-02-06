@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    height: 100%; 
+}
+.header{
+    padding: 15px 0;
+    background-color: #ffffff;
+
+}
+.header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+}
+.log-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px solid green;
+    width: 80%;
+    
+} 
+.log-content-img{
+    border: 0px solid #42515f ;
+    
+}
+
+.AddressBook-text {
+    font: normal normal bold 150px/20px Monteserrat;
+    font-family: "Monteserrat" sans-serif;
+    letter-spacing: 0px;
+    color: #93b525;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.AddressBookTest-details {
+    color: #596978;
+}
+*{box-sizing: border-box;
+ 
+}
