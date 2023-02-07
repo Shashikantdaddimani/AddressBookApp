@@ -55,3 +55,53 @@ class AddressBook {
         return "name : " + this.name + ", address : " + this.address + ", state : " + this.state + ", city : " + this.city + ", zip code : " + this.zip + ", phone number : " + this.phoneNumber;
     }
 }
+const save = () => {
+    try {
+        let personDetails = createAddressBook();
+        createAndUpdateStorage(personDetails);
+    }
+    catch (exception) {
+        return;
+    }
+}
+function createAndUpdateStorage(personDetails) {
+    let AddressBook = JSON.parse(localStorage.getItem("AddressBookList"));
+  
+    if (AddressBook != undefined) {
+        AddressBook.push(personDetails);
+    }
+    else {
+        AddressBook = [personDetails];
+    }
+    alert(AddressBook.toString());
+   // localStorage.setItem('personEdit', JSON.stringify(personDetails));
+    localStorage.setItem("AddressBookList", JSON.stringify(AddressBook));
+   
+}
+const createAddressBook = () => {
+    let addressBook = new AddressBook();
+    addressBook.id = createNewEmployeeId();
+    addressBook.name = getInputValueById("#name");
+    addressBook.address = getInputValueById("#address");
+    addressBook.state = getInputValueById("#state");
+    addressBook.city = getInputValueById("#city");
+    addressBook.zip = getInputValueById("#zip");
+    addressBook.phoneNumber = getInputValueById("#phoneNumber");
+    return addressBook;
+}
+
+const getInputValueById = (id) => {
+    let value = document.querySelector(id).value;
+    return value;
+}
+const getInputValue = (id) => {
+    let value = document.getElementById(id).value;
+    return value;
+}
+
+const createNewEmployeeId = () => {
+    let empID = localStorage.getItem("PersonID");
+    empID = !empID ? "1" : (parseInt(empID) + 1).toString();
+    localStorage.setItem("PersonID", empID);
+    return empID;
+}
