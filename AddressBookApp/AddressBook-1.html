@@ -4,89 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddressBook</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./AddressBook-1.css">
 </head>
 <body>
-  <script src="./AddressBook-1.js"></script>
+    
+    <script src="./AddressBook-1.js"></script>
     <header class="header-content header">
-      <div class="log-content">
-        <img src="../Assets/Images/Logo.jpg" alt="" width="40px">
-          <div>
-            <span class="AddressBook-text">Address</span><br>
-            <span class="AddressBook-text AddressBookTest-details">Book</span>
+        <div class="log-content">
+            <img src="../Assets/Images/Logo.jpg" alt="" width="40px">
+            <div>
+                <span class="AddressBook-text">Address</span><br>
+                <span class="AddressBook-text AddressBookTest-details">Book</span>
+            </div>
+        </div>
+
+    </header>
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save();return false">
+            <div class="form-head">
+                Person Address form
+            </div>
+            <div class= "Cancel"    > 
+               <a href="./HomePage_addressbook.html" class="add-button">
+               <img src="../Assets/ICons/add-24px.svg" alt="">Add person </a>
+            </div>
+        </form>
+    </div>
+    <div class="form-content-1">
+        <form class="form-1" action="#" onsubmit="save();return false">
+       
+        <div class="row-content">
+          
+            <input class="input" type="text" id="name"
+            name="name" placeholder="your name..." required>
+            <error-output class="text-error error-output" for="text"></error-output>
+        </div>
+        <div class="row-content">
+            <input class="input_address" type="text" id="address"
+            name="name" placeholder="Address.." required>
+        </div>
+        <div class="row-content ">
+            <div>
+               
+                <select class="select text " id="city" name="city">select city
+                    <option value="Select city">Select city</option>
+                    <option value="hukkeri">hukkeri</option>
+                    <option value="chikkodi">chikkodi</option>
+                    <option value="gokak">gokak</option>
+                    <option value="athani">athani</option>
+                    <option value="nippani">nippani</option>
+                    <option value="savadatti">savadatti</option>
+                    <option value="kittur">kittur</option>
+                    
+                   
+                </select>
+                <select class="select element" id="state" name="state" >
+                    <option value="Select state">Select state</option>
+                    <option value="Andra pradesh">Andra pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="karnatak">karnatak</option>
+                    <option value="panjab">panjab</option>
+                    <option value="keral">keral</option>
+                   
+                </select>
+                <select class="select" id="zip" name="zip">
+                    <option value="Zip code">Zip code</option>
+                    <option value="591309">591309</option>
+                    <option value="561586">561586</option>
+                    <option value="563256">563256</option>
+                    <option value="563256">563285</option>
+                    <option value="563256">563032</option>
+                    <option value="563256">563894</option>
+                  
+                </select>
+            </div>
+        </div>
+        <div class="row-content">
+            <input class="input" type="phoneNumber" id="phoneNumber"
+            name="name" placeholder="phoneNumber..." required>
+        </div>
+        <div class="buttonParent">
+            <div class="submit-reset">
+            <button type="submit" class="button submitButton" id="submitButton">Add</button>
+            <button type="reset" class="cancelButton button">Reset</button>
           </div>
         </div>
-   </header>
-   <div class="form-content">
-    <form class="form" action="#"onsubmit="save();return false" >
-      <div class="form-head">
-        Person Address form
-      </div>
-    </form>
-   </div>
-   <div class="form-content-1">
-    <form class="form-1" action="#" onsubmit="save();return false">
-   
-    <div class="row-content">
-      
-        <input class="input" type="text" id="name"
-        name="name" placeholder="your name..." required>
-        <error-output class="text-error error-output" for="text"></error-output>
+        </form>
     </div>
-    <div class="row-content">
-        <input class="input_address" type="text" id="address"
-        name="name" placeholder="Address.." required>
-    </div>
-    <div class="row-content ">
-        <div>
-           
-            <select class="select text " id="city" name="city">select city
-                <option value="Select city">Select city</option>
-                <option value="hukkeri">hukkeri</option>
-                <option value="chikkodi">chikkodi</option>
-                <option value="gokak">gokak</option>
-                <option value="athani">athani</option>
-                <option value="nippani">nippani</option>
-                <option value="savadatti">savadatti</option>
-                <option value="kittur">kittur</option>
-                
-               
-            </select>
-            <select class="select element" id="state" name="state" >
-                <option value="Select state">Select state</option>
-                <option value="Andra pradesh">Andra pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Haryana">Haryana</option>
-                <option value="karnatak">karnatak</option>
-                <option value="panjab">panjab</option>
-                <option value="keral">keral</option>
-               
-            </select>
-            <select class="select" id="zip" name="zip">
-                <option value="Zip code">Zip code</option>
-                <option value="591309">591309</option>
-                <option value="561586">561586</option>
-                <option value="563256">563256</option>
-                <option value="563256">563285</option>
-                <option value="563256">563032</option>
-                <option value="563256">563894</option>
-              
-            </select>
-        </div>
-    </div>
-    <div class="row-content">
-        <input class="input" type="phoneNumber" id="phoneNumber"
-        name="name" placeholder="phoneNumber..." required>
-    </div>
-    <div class="buttonParent">
-        <div class="submit-reset">
-        <button type="submit" class="button submitButton" id="submitButton">Add</button>
-        <button type="reset" class="cancelButton button">Reset</button>
-      </div>
-    </div>
-    </form>
-  </div>
 </body>
 </html>
